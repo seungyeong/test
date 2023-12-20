@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Blogs</h1>
+
+
+
+    <% @blogs.each_with_index do |blog, index| %>
+      <div>
+        <span><%=index+1 %></span>
+        <%= link_to(blog) do %>
+          <%= blog.title %>
+        <% end %>
+      </div>
+      <hr>
+    <% end %>
+
+<br>
+
+<%= link_to 'New Blog', new_blog_path %>
